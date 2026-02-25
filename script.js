@@ -377,16 +377,9 @@ const questions = [
             { text: 'Physics', correct: false },
             { text: 'Chemistry', correct: false }
         ]
-    }
-];
-
-// --- Combined Quiz: Text and Image Questions ---
-const combinedQuestions = [
-    // Text-based questions
-    ...questions,
-    // Image-based questions
-    {
-        image: "/IMG/1520.png",
+	},
+	{
+        image: "1520.png",
         question: 'What subject does this image best represent?',
         answers: [
             { text: 'Religion', correct: true },
@@ -396,7 +389,7 @@ const combinedQuestions = [
         ]
     },
     {
-        image: "/IMG/1868.png",
+        image: "1868.png",
         question: 'What subject does this image best represent?',
         answers: [
             { text: 'Nature', correct: true },
@@ -406,7 +399,7 @@ const combinedQuestions = [
         ]
     },
     {
-        image: "/IMG/1885.png",
+        image: "1885.png",
         question: 'What subject does this image best represent?',
         answers: [
             { text: 'Legend', correct: true },
@@ -427,6 +420,64 @@ const combinedQuestions = [
     },
     {
         image: "/IMG/2016.png",
+        question: 'What subject does this image best represent?',
+        answers: [
+            { text: 'People', correct: true },
+            { text: 'Nature', correct: false },
+            { text: 'History', correct: false },
+            { text: 'Religion', correct: false }
+        ]
+    }
+];
+
+// --- Combined Quiz: Text and Image Questions ---
+
+const combinedQuestions = [
+    // Text-based questions
+    ...questions,
+    // Image-based questions
+    {
+        image: "1520.png",
+        question: 'What subject does this image best represent?',
+        answers: [
+            { text: 'Religion', correct: true },
+            { text: 'Nature', correct: false },
+            { text: 'Legend', correct: false },
+            { text: 'History', correct: false }
+        ]
+    },
+    {
+        image: "1868.png",
+        question: 'What subject does this image best represent?',
+        answers: [
+            { text: 'Nature', correct: true },
+            { text: 'People', correct: false },
+            { text: 'Legend', correct: false },
+            { text: 'Religion', correct: false }
+        ]
+    },
+    {
+        image: "1885.png",
+        question: 'What subject does this image best represent?',
+        answers: [
+            { text: 'Legend', correct: true },
+            { text: 'History', correct: false },
+            { text: 'Nature', correct: false },
+            { text: 'People', correct: false }
+        ]
+    },
+    {
+        image: "1955.png",
+        question: 'What subject does this image best represent?',
+        answers: [
+            { text: 'History', correct: true },
+            { text: 'Legend', correct: false },
+            { text: 'Religion', correct: false },
+            { text: 'Nature', correct: false }
+        ]
+    },
+    {
+        image: "2016.png",
         question: 'What subject does this image best represent?',
         answers: [
             { text: 'People', correct: true },
@@ -503,20 +554,17 @@ function showQuestion(question) {
 function selectAnswer(e) {
     const selectedButton = e.target;
     const isCorrect = selectedButton.dataset.correct === "true";
-    
     if (isCorrect) {
         score++;
         selectedButton.classList.add('correct');
     } else {
         selectedButton.classList.add('wrong');
     }
-
     // Disable all buttons after choice
     Array.from(answerButtonsElement.children).forEach(button => {
         button.disabled = true;
         if(button.dataset.correct === "true") button.classList.add('correct');
     });
-
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide');
     } else {
@@ -534,7 +582,7 @@ function showScore() {
     quizContent.classList.add('hide');
     nextButton.classList.add('hide');
     resultContainer.classList.remove('hide');
-    scoreText.innerText = `You scored ${score} out of ${questions.length}!`;
+    scoreText.innerText = `You scored ${score} out of ${combinedQuestions.length}!`;
 }
 
 startQuiz();
