@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ART APPRECIATION</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="background-decor"></div>
+    <div class="quiz-container" id="quiz">
+        <header class="quiz-header">
+            <img src="/IMG/HEART.gif" alt="Quiz Logo" class="quiz-logo">
+            <h1>Module Quiz</h1>
+            <p class="quiz-subtitle">Art Appreciation: Humanities & Arts</p>
+            <div class="quiz-info">
+                <span class="info-item"><strong>Difficulty:</strong> You can do it!!</span>
+                <span class="info-item"><strong>Questions:</strong> <span id="total-questions">?</span></span>
+            </div>
+        </header>
+        <div id="question-header">
+            <div class="question-progress">
+                <span id="current-question">1</span> / <span id="total-question">?</span>
+            </div>
+            <h2 id="question-text">Question Text</h2>
+            <div id="answer-buttons" class="btn-grid"></div>
+        </div>
+        <div id="controls">
+            <button id="next-btn" class="hide">Next Question</button>
+        </div>
+        <div id="result-container" class="hide">
+            <h2>Quiz Completed!</h2>
+            <p id="score-text"></p>
+            <div class="result-details">
+                <p><strong>Review your answers and try again to improve!</strong></p>
+                <p>Thank you for exploring Art Appreciation.</p>
+            </div>
+            <button onclick="location.reload()">Restart Quiz</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

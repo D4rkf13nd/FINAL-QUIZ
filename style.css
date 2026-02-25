@@ -1,0 +1,194 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.quiz-container {
+    background: rgba(255,255,255,0.95);
+    padding: 2.5rem 2rem;
+    border-radius: 18px;
+    box-shadow: 0 16px 40px rgba(80,120,200,0.15);
+    width: 420px;
+    max-width: 95%;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* Quiz Header */
+.quiz-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.quiz-logo {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 0.5rem;
+    filter: drop-shadow(0 2px 8px rgba(80,120,200,0.15));
+}
+
+.quiz-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #3a4a6b;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.quiz-subtitle {
+    font-size: 1.1rem;
+    color: #764ba2;
+    margin-top: 0.2rem;
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+}
+
+.btn-grid {
+    display: grid;
+    gap: 12px;
+    margin: 24px 0;
+}
+
+button {
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #a1c4fd 0%, #c2e9fb 100%);
+    color: #3a4a6b;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(80,120,200,0.08);
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    outline: none;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #c2e9fb 0%, #a1c4fd 100%);
+    color: #2d3a54;
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 6px 16px rgba(80,120,200,0.13);
+}
+
+#next-btn {
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    border: none;
+    width: 100%;
+    font-weight: 600;
+    margin-top: 10px;
+    box-shadow: 0 2px 8px rgba(80,120,200,0.08);
+}
+
+.hide { display: none; }
+
+.correct {
+    background-color: #d4edda !important;
+    border: 2px solid #28a745 !important;
+    color: #218838 !important;
+}
+.wrong {
+    background-color: #f8d7da !important;
+    border: 2px solid #dc3545 !important;
+    color: #c82333 !important;
+}
+
+#result-container h2 {
+    color: #764ba2;
+    margin-bottom: 0.5rem;
+}
+
+#result-container p {
+    color: #3a4a6b;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.result-details {
+    background: #f4f4f9;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1rem 0;
+    color: #3a4a6b;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px rgba(80,120,200,0.08);
+}
+
+.quiz-info {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.info-item {
+    background: #e0eafc;
+    color: #3a4a6b;
+    padding: 0.4rem 1rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 8px rgba(80,120,200,0.08);
+}
+
+.question-progress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    color: #764ba2;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.background-decor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+    background: none;
+}
+.background-decor::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, #a1c4fd 60%, transparent 100%);
+    opacity: 0.25;
+    border-radius: 50%;
+}
+.background-decor::after {
+    content: '';
+    position: absolute;
+    bottom: 15%;
+    right: 8%;
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle, #764ba2 60%, transparent 100%);
+    opacity: 0.18;
+    border-radius: 50%;
+}
+
+.lottie-nav-animation {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.2rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
