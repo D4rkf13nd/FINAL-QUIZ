@@ -380,8 +380,67 @@ const questions = [
     }
 ];
 
+// --- Combined Quiz: Text and Image Questions ---
+const combinedQuestions = [
+    // Text-based questions
+    ...questions,
+    // Image-based questions
+    {
+        image: "/IMG/1520.png",
+        question: 'What subject does this image best represent?',
+        answers: [
+            { text: 'Religion', correct: true },
+            { text: 'Nature', correct: false },
+            { text: 'Legend', correct: false },
+            { text: 'History', correct: false }
+        ]
+    },
+    {
+        image: "/IMG/1868.png",
+        question: 'What subject does this image best represent?',
+        answers: [
+            { text: 'Nature', correct: true },
+            { text: 'People', correct: false },
+            { text: 'Legend', correct: false },
+            { text: 'Religion', correct: false }
+        ]
+    },
+    {
+        image: "/IMG/1885.png",
+        question: 'What subject does this image best represent?',
+        answers: [
+            { text: 'Legend', correct: true },
+            { text: 'History', correct: false },
+            { text: 'Nature', correct: false },
+            { text: 'People', correct: false }
+        ]
+    },
+    {
+        image: "/IMG/1955.png",
+        question: 'What subject does this image best represent?',
+        answers: [
+            { text: 'History', correct: true },
+            { text: 'Legend', correct: false },
+            { text: 'Religion', correct: false },
+            { text: 'Nature', correct: false }
+        ]
+    },
+    {
+        image: "/IMG/2016.png",
+        question: 'What subject does this image best represent?',
+        answers: [
+            { text: 'People', correct: true },
+            { text: 'Nature', correct: false },
+            { text: 'History', correct: false },
+            { text: 'Religion', correct: false }
+        ]
+    }
+];
+
+// All possible categories to use as decoys
+const categories = ["Religion", "Nature", "Legend", "History", "People"];
+
 let shuffledQuestions, currentQuestionIndex;
-let score = 0;
 
 const questionElement = document.getElementById('question-text');
 const answerButtonsElement = document.getElementById('answer-buttons');
@@ -396,15 +455,34 @@ const totalQuestionElement = document.getElementById('total-question');
 // Start Quiz
 function startQuiz() {
     // Shuffles the questions array
-    shuffledQuestions = questions.sort(() => Math.random() - 0.5);
+    shuffledQuestions = combinedQuestions.sort(() => Math.random() - 0.5);
     currentQuestionIndex = 0;
     score = 0;
-    if (totalQuestionsElement) totalQuestionsElement.textContent = questions.length;
-    if (totalQuestionElement) totalQuestionElement.textContent = questions.length;
+    if (totalQuestionsElement) totalQuestionsElement.textContent = combinedQuestions.length;
+    if (totalQuestionElement) totalQuestionElement.textContent = combinedQuestions.length;
     showQuestion(shuffledQuestions[currentQuestionIndex]);
 }
 
 function showQuestion(question) {
+    // Remove previous image if any
+    const prevImg = document.getElementById('question-image');
+    if (prevImg) prevImg.remove();
+    // Show image if available
+    if (question.image) {
+        const img = document.createElement('img');
+        img.src = question.image;
+        img.alt = 'Question related image';
+        img.id = 'question-image';
+        img.style.display = 'block';
+        img.style.maxWidth = '220px';
+        img.style.maxHeight = '160px';
+        img.style.margin = '0.5rem auto 1rem auto';
+        img.style.borderRadius = '12px';
+        img.style.boxShadow = '0 4px 16px rgba(80,120,200,0.13)';
+        img.style.objectFit = 'cover';
+        img.style.background = '#fff';
+        questionElement.parentNode.insertBefore(img, questionElement);
+    }
     questionElement.textContent = question.question;
     answerButtonsElement.innerHTML = ''; // Clear old buttons
     
