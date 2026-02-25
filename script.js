@@ -484,9 +484,10 @@ function showQuestion(question) {
         questionElement.parentNode.insertBefore(img, questionElement);
     }
     questionElement.textContent = question.question;
-    answerButtonsElement.innerHTML = ''; // Clear old buttons
-    
-    question.answers.forEach(answer => {
+    answerButtonsElement.innerHTML = '';
+    // Shuffle choices for each question
+    const shuffledAnswers = question.answers.slice().sort(() => Math.random() - 0.5);
+    shuffledAnswers.forEach(answer => {
         const button = document.createElement('button');
         button.textContent = answer.text;
         button.classList.add('btn');
