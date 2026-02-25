@@ -182,13 +182,3 @@ button:hover {
     opacity: 0.18;
     border-radius: 50%;
 }
-
-.lottie-nav-animation {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 1.2rem auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-}
