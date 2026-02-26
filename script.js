@@ -427,6 +427,86 @@ const questions = [
             { text: 'History', correct: false },
             { text: 'Religion', correct: false }
         ]
+    },
+    {
+        image: "abstraction.png",
+        question: 'Which art style is best represented by this image?',
+        answers: [
+            { text: 'Abstraction', correct: true },
+            { text: 'Cubism', correct: false },
+            { text: 'Fauvism', correct: false },
+            { text: 'Symbolism', correct: false }
+        ]
+    },
+    {
+        image: "cubism.png",
+        question: 'Which art style is best represented by this image?',
+        answers: [
+            { text: 'Cubism', correct: true },
+            { text: 'Dadaism', correct: false },
+            { text: 'Futurism', correct: false },
+            { text: 'Mangling', correct: false }
+        ]
+    },
+    {
+        image: "dadaism.png",
+        question: 'Which art style is best represented by this image?',
+        answers: [
+            { text: 'Dadaism', correct: true },
+            { text: 'Elongation', correct: false },
+            { text: 'Fauvism', correct: false },
+            { text: 'Symbolism', correct: false }
+        ]
+    },
+    {
+        image: "elongation.png",
+        question: 'Which art style is best represented by this image?',
+        answers: [
+            { text: 'Elongation', correct: true },
+            { text: 'Abstraction', correct: false },
+            { text: 'Cubism', correct: false },
+            { text: 'Futurism', correct: false }
+        ]
+    },
+    {
+        image: "fauvism.png",
+        question: 'Which art style is best represented by this image?',
+        answers: [
+            { text: 'Fauvism', correct: true },
+            { text: 'Dadaism', correct: false },
+            { text: 'Symbolism', correct: false },
+            { text: 'Mangling', correct: false }
+        ]
+    },
+    {
+        image: "futurism.png",
+        question: 'Which art style is best represented by this image?',
+        answers: [
+            { text: 'Futurism', correct: true },
+            { text: 'Cubism', correct: false },
+            { text: 'Abstraction', correct: false },
+            { text: 'Elongation', correct: false }
+        ]
+    },
+    {
+        image: "mangling.png",
+        question: 'Which art style is best represented by this image?',
+        answers: [
+            { text: 'Mangling', correct: true },
+            { text: 'Fauvism', correct: false },
+            { text: 'Dadaism', correct: false },
+            { text: 'Symbolism', correct: false }
+        ]
+    },
+    {
+        image: "symbolism.png",
+        question: 'Which art style is best represented by this image?',
+        answers: [
+            { text: 'Symbolism', correct: true },
+            { text: 'Futurism', correct: false },
+            { text: 'Cubism', correct: false },
+            { text: 'Abstraction', correct: false }
+        ]
     }
 ];
 
@@ -437,53 +517,83 @@ const combinedQuestions = [
     ...questions,
     // Image-based questions
     {
-        image: "1520.png",
-        question: 'What subject does this image best represent?',
+        image: "abstraction.png",
+        question: 'Which art style is best represented by this image?',
         answers: [
-            { text: 'Religion', correct: true },
-            { text: 'Nature', correct: false },
-            { text: 'Legend', correct: false },
-            { text: 'History', correct: false }
+            { text: 'Abstraction', correct: true },
+            { text: 'Cubism', correct: false },
+            { text: 'Fauvism', correct: false },
+            { text: 'Symbolism', correct: false }
         ]
     },
     {
-        image: "1868.png",
-        question: 'What subject does this image best represent?',
+        image: "cubism.png",
+        question: 'Which art style is best represented by this image?',
         answers: [
-            { text: 'Nature', correct: true },
-            { text: 'People', correct: false },
-            { text: 'Legend', correct: false },
-            { text: 'Religion', correct: false }
+            { text: 'Cubism', correct: true },
+            { text: 'Dadaism', correct: false },
+            { text: 'Futurism', correct: false },
+            { text: 'Mangling', correct: false }
         ]
     },
     {
-        image: "1885.png",
-        question: 'What subject does this image best represent?',
+        image: "dadaism.png",
+        question: 'Which art style is best represented by this image?',
         answers: [
-            { text: 'Legend', correct: true },
-            { text: 'History', correct: false },
-            { text: 'Nature', correct: false },
-            { text: 'People', correct: false }
+            { text: 'Dadaism', correct: true },
+            { text: 'Elongation', correct: false },
+            { text: 'Fauvism', correct: false },
+            { text: 'Symbolism', correct: false }
         ]
     },
     {
-        image: "1955.png",
-        question: 'What subject does this image best represent?',
+        image: "elongation.png",
+        question: 'Which art style is best represented by this image?',
         answers: [
-            { text: 'History', correct: true },
-            { text: 'Legend', correct: false },
-            { text: 'Religion', correct: false },
-            { text: 'Nature', correct: false }
+            { text: 'Elongation', correct: true },
+            { text: 'Abstraction', correct: false },
+            { text: 'Cubism', correct: false },
+            { text: 'Futurism', correct: false }
         ]
     },
     {
-        image: "2016.png",
-        question: 'What subject does this image best represent?',
+        image: "fauvism.png",
+        question: 'Which art style is best represented by this image?',
         answers: [
-            { text: 'People', correct: true },
-            { text: 'Nature', correct: false },
-            { text: 'History', correct: false },
-            { text: 'Religion', correct: false }
+            { text: 'Fauvism', correct: true },
+            { text: 'Dadaism', correct: false },
+            { text: 'Symbolism', correct: false },
+            { text: 'Mangling', correct: false }
+        ]
+    },
+    {
+        image: "futurism.png",
+        question: 'Which art style is best represented by this image?',
+        answers: [
+            { text: 'Futurism', correct: true },
+            { text: 'Cubism', correct: false },
+            { text: 'Abstraction', correct: false },
+            { text: 'Elongation', correct: false }
+        ]
+    },
+    {
+        image: "mangling.png",
+        question: 'Which art style is best represented by this image?',
+        answers: [
+            { text: 'Mangling', correct: true },
+            { text: 'Fauvism', correct: false },
+            { text: 'Dadaism', correct: false },
+            { text: 'Symbolism', correct: false }
+        ]
+    },
+    {
+        image: "symbolism.png",
+        question: 'Which art style is best represented by this image?',
+        answers: [
+            { text: 'Symbolism', correct: true },
+            { text: 'Futurism', correct: false },
+            { text: 'Cubism', correct: false },
+            { text: 'Abstraction', correct: false }
         ]
     }
 ];
