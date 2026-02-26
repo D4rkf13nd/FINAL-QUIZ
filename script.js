@@ -409,7 +409,7 @@ const questions = [
         ]
     },
     {
-        image: "/IMG/1955.png",
+        image: "1955.png",
         question: 'What subject does this image best represent?',
         answers: [
             { text: 'History', correct: true },
@@ -419,7 +419,7 @@ const questions = [
         ]
     },
     {
-        image: "/IMG/2016.png",
+        image: "2016.png",
         question: 'What subject does this image best represent?',
         answers: [
             { text: 'People', correct: true },
@@ -506,6 +506,26 @@ const questions = [
             { text: 'Futurism', correct: false },
             { text: 'Cubism', correct: false },
             { text: 'Abstraction', correct: false }
+        ]
+    },
+    {
+        image: "realism.png",
+        question: 'Which art style is best represented by this image?',
+        answers: [
+            { text: 'Realism', correct: true },
+            { text: 'Abstraction', correct: false },
+            { text: 'Dadaism', correct: false },
+            { text: 'Symbolism', correct: false }
+        ]
+    },
+    {
+        image: "naturalism.png",
+        question: 'Which art style is best represented by this image?',
+        answers: [
+            { text: 'Naturalism', correct: true },
+            { text: 'Impressionism', correct: false },
+            { text: 'Mangling', correct: false },
+            { text: 'Fauvism', correct: false }
         ]
     }
 ];
@@ -594,6 +614,46 @@ const combinedQuestions = [
             { text: 'Futurism', correct: false },
             { text: 'Cubism', correct: false },
             { text: 'Abstraction', correct: false }
+        ]
+    },
+    {
+        image: "realism1.png",
+        question: 'Which art style is best represented by this image?',
+        answers: [
+            { text: 'Realism', correct: true },
+            { text: 'Impressionism', correct: false },
+            { text: 'Fauvism', correct: false },
+            { text: 'Cubism', correct: false }
+        ]
+    },
+    {
+        image: "realism2.png",
+        question: 'Which art style is best represented by this image?',
+        answers: [
+            { text: 'Realism', correct: true },
+            { text: 'Abstraction', correct: false },
+            { text: 'Dadaism', correct: false },
+            { text: 'Symbolism', correct: false }
+        ]
+    },
+    {
+        image: "naturalism1.png",
+        question: 'Which art style is best represented by this image?',
+        answers: [
+            { text: 'Naturalism', correct: true },
+            { text: 'Realism', correct: false },
+            { text: 'Cubism', correct: false },
+            { text: 'Futurism', correct: false }
+        ]
+    },
+    {
+        image: "naturalism2.png",
+        question: 'Which art style is best represented by this image?',
+        answers: [
+            { text: 'Naturalism', correct: true },
+            { text: 'Impressionism', correct: false },
+            { text: 'Mangling', correct: false },
+            { text: 'Fauvism', correct: false }
         ]
     }
 ];
